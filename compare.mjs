@@ -4,7 +4,7 @@ import selectionSort from "./selection.sort.mjs";
 import mergeSort from "./merge.sort.mjs";
 import quickSort from "./quick.sort.mjs";
 
-import findAvgExecTime from "./executer.mjs";
+import findAvgExecTime from "./executor.mjs";
 
 // @desc   Compare the execution time of different sorting algorithms
 const compareAlgorithms = (type, array) => {

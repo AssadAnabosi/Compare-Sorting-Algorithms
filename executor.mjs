@@ -2,11 +2,12 @@
 const findAvgExecTime = (sortingAlgo, numbers, times) => {
     try {
         let avgExecutionTime = 0;
+        let array = [];
         for (let i = 0; i < times; i++) {
-
+            array = [...numbers]; // Copy the array
             let startTime = new Date().getTime(); // Get the start time in milliseconds
 
-            sortingAlgo(numbers);
+            sortingAlgo(array);
 
             let endTime = new Date().getTime(); // Get the end time in milliseconds
 
