@@ -7,7 +7,7 @@ arraySizes.forEach((size) => {
     let sortedArray = generate.sortedArray(size);
     let randomArray = generate.randomArray(size);
     let reversedArray = generate.reversedArray(size);
-
+    // @desc  Compare the execution time of different sorting algorithms
     compareAlgorithms("Sorted", sortedArray);
     compareAlgorithms("Random", randomArray);
     compareAlgorithms("Reversed", reversedArray);
