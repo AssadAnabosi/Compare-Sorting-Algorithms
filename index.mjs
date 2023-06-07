@@ -1,7 +1,7 @@
 import * as generate from "./array.generate.mjs";
 import compareAlgorithms from "./compare.mjs";
 
-let arraySizes = [10, 100, 1000, 10000, 100000];
+let arraySizes = [1000, 5000, 10000, 25000, 50000, 75000, 100000, 150000, 300000, 500000];
 let types = ["Sorted", "Random", "Reversed"];
 
 types.forEach((type) => {
