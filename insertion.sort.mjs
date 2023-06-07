@@ -1,8 +1,8 @@
 const insertionSort = (array) => {
-    var len = array.length;
-    for (var i = 1; i < len; i++) {
-        var key = array[i];
-        var j = i - 1;
+    let len = array.length;
+    for (let i = 1; i < len; i++) {
+        let key = array[i];
+        let j = i - 1;
         while (j >= 0 && array[j] > key) {
             array[j + 1] = array[j];
             j--;

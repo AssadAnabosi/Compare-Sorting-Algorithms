@@ -4,22 +4,22 @@ const mergeSort = (array) => {
     }
 
     // Divide the array into two halves
-    var mid = Math.floor(array.length / 2);
-    var left = array.slice(0, mid);
-    var right = array.slice(mid);
+    let mid = Math.floor(array.length / 2);
+    let left = array.slice(0, mid);
+    let right = array.slice(mid);
 
     // Recursively sort the two halves
-    var sortedLeft = mergeSort(left);
-    var sortedRight = mergeSort(right);
+    let sortedLeft = mergeSort(left);
+    let sortedRight = mergeSort(right);
 
     // Merge the sorted halves
     return merge(sortedLeft, sortedRight);
 }
 
 const merge = (left, right) => {
-    var result = [];
-    var leftIndex = 0;
-    var rightIndex = 0;
+    let result = [];
+    let leftIndex = 0;
+    let rightIndex = 0;
 
     // Compare elements from both arrays and merge them in sorted order
     while (leftIndex < left.length && rightIndex < right.length) {
