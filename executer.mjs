@@ -1,17 +1,22 @@
 const findAvgExecTime = (sortingAlgo, numbers, times) => {
-    let avgExecutionTime = 0;
-    for (let i = 0; i < times; i++) {
+    try {
+        let avgExecutionTime = 0;
+        for (let i = 0; i < times; i++) {
 
-        let startTime = new Date().getTime();
+            let startTime = new Date().getTime();
 
-        sortingAlgo(numbers);
+            sortingAlgo(numbers);
 
-        let endTime = new Date().getTime();
+            let endTime = new Date().getTime();
 
-        let executionTime = endTime - startTime; // Calculate the execution time
-        avgExecutionTime += executionTime;
+            let executionTime = endTime - startTime; // Calculate the execution time
+            avgExecutionTime += executionTime;
+        }
+        return `${avgExecutionTime / times} ms`;
     }
-    return avgExecutionTime / times;
+    catch (error) {
+        return error.message;
+    }
 };
 
 export default findAvgExecTime;
