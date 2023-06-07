@@ -10,7 +10,6 @@ import findAvgExecTime from "./executer.mjs";
 const compareAlgorithms = (type, array) => {
     const RUN_COUNT = 10;
     let executionTime = 0;
-
     console.log(`${type} Array of size ${array.length} elements`);
 
     executionTime = findAvgExecTime(bubbleSort, array, RUN_COUNT);
@@ -27,6 +26,7 @@ const compareAlgorithms = (type, array) => {
 
     executionTime = findAvgExecTime(quickSort, array, RUN_COUNT);
     console.log("Quick Sort:", executionTime);
+    console.log("--------------------------------------------------");
 }
 
 export default compareAlgorithms;
