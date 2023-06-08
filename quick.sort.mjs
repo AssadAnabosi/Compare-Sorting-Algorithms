@@ -1,9 +1,29 @@
-const quickSort = (array, left = 0, right = array.length - 1) => {
-    if (left < right) {
-        let pivotIndex = partition(array, left, right);
-        quickSort(array, left, pivotIndex - 1);
-        quickSort(array, pivotIndex + 1, right);
+const quickSort = (array) => {
+    if (array.length <= 1) {
+        return array;
     }
+
+    let stack = [];
+    stack.push(0);
+    stack.push(array.length - 1);
+
+    while (stack.length > 0) {
+        let end = stack.pop();
+        let start = stack.pop();
+
+        let pivotIndex = partition(array, start, end);
+
+        if (pivotIndex - 1 > start) {
+            stack.push(start);
+            stack.push(pivotIndex - 1);
+        }
+
+        if (pivotIndex + 1 < end) {
+            stack.push(pivotIndex + 1);
+            stack.push(end);
+        }
+    }
+
     return array;
 }
 
