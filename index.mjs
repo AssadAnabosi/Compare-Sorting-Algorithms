@@ -2,6 +2,7 @@ import * as generate from "./array.generate.mjs";
 import compareAlgorithms from "./compare.mjs";
 
 let arraySizes = [1000, 5000, 10000, 25000, 50000, 75000, 100000, 150000, 300000, 500000];
+// extra type: Controlled (to control the max range of random numbers to be generated (Math.floor(size * 0.75))
 let types = ["Sorted", "Random", "Reversed"];
 
 types.forEach((type) => {
