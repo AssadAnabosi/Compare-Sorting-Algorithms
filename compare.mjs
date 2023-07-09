@@ -3,6 +3,7 @@ import insertionSort from "./insertion.sort.mjs";
 import selectionSort from "./selection.sort.mjs";
 import mergeSort from "./merge.sort.mjs";
 import quickSort from "./quick.sort.mjs";
+import countingSort from "./counting.sort.mjs";
 
 import findAvgExecTime from "./executor.mjs";
 
@@ -26,6 +27,10 @@ const compareAlgorithms = (type, array) => {
 
     executionTime = findAvgExecTime(quickSort, array, RUN_COUNT);
     console.log("Quick Sort:", executionTime);
+
+    executionTime = findAvgExecTime(countingSort, array, RUN_COUNT);
+    console.log("Counting Sort:", executionTime);
+
     console.log("--------------------------------------------------");
 }
 
